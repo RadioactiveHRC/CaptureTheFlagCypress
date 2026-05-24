@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cypress Capture League | Capture the Flag in Cypress, Texas</title>
+    <meta
+      name="description"
+      content="Cypress Capture League is a modern, organized Capture the Flag league in Cypress, Texas for players, parents, and teams."
+    />
+    <meta name="theme-color" content="#06172f" />
+    <meta property="og:title" content="Cypress Capture League" />
+    <meta
+      property="og:description"
+      content="Teamwork, strategy, athleticism, and community through organized Capture the Flag competition."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero-capture-league.png" />
+    <link rel="preload" as="image" href="assets/images/hero-capture-league.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="site-loader" data-loader aria-hidden="true">
+      <div class="loader-mark"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Cypress Capture League home">
+          <span class="brand-mark">CCL</span>
+          <span class="brand-copy">
+            <span data-config="leagueName">Cypress Capture League</span>
+            <small>Cypress, Texas</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-menu">
+          <i data-lucide="menu" aria-hidden="true"></i>
+          <span class="sr-only">Open navigation</span>
+        </button>
+
+        <div class="nav-menu" id="primary-menu" data-nav-menu>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#works" class="nav-link">How It Works</a>
+          <a href="#info" class="nav-link">Info</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#safety" class="nav-link">Rules</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#registration" class="btn btn-small btn-primary" data-scroll-target="registration">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-dark" id="home" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="season-pill">
+              <span class="pulse-dot"></span>
+              <span data-config="seasonBanner">Season Coming Soon</span>
+            </div>
+            <h1 id="hero-title">
+              <span data-config="leagueName">Cypress Capture League</span>
+            </h1>
+            <p class="hero-lede" data-config="slogan">
+              Run with purpose. Win with teamwork.
+            </p>
+            <p class="hero-description" data-config="leagueDescription">
+              A polished, organized Capture the Flag league for Cypress families, athletes, and teams.
+            </p>
+            <div class="hero-actions">
+              <a href="#registration" class="btn btn-primary" data-scroll-target="registration">
+                Register Now
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+              <a href="#about" class="btn btn-ghost">
+                Learn More
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-panel glass-card reveal" aria-label="Season countdown">
+            <span class="eyebrow">Countdown to kickoff</span>
+            <div class="countdown" data-countdown aria-live="polite">
+              <div><strong data-days>00</strong><span>Days</span></div>
+              <div><strong data-hours>00</strong><span>Hours</span></div>
+              <div><strong data-minutes>00</strong><span>Min</span></div>
+              <div><strong data-seconds>00</strong><span>Sec</span></div>
+            </div>
+            <dl class="hero-meta">
+              <div>
+                <dt>Season</dt>
+                <dd data-config="seasonDates">Spring 2027</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd data-config="primaryLocation">Cypress, TX parks</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="League highlights">
+        <div class="container stat-grid reveal-group">
+          <div class="stat-card reveal">
+            <i data-lucide="flag" aria-hidden="true"></i>
+            <strong>Weekly Matches</strong>
+            <span>Structured competition with clear schedules.</span>
+          </div>
+          <div class="stat-card reveal">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            <strong>Safety First</strong>
+            <span>Referees, boundaries, and sportsmanship standards.</span>
+          </div>
+          <div class="stat-card reveal">
+            <i data-lucide="users-round" aria-hidden="true"></i>
+            <strong>Team Culture</strong>
+            <span>Leadership, communication, and fast decision-making.</span>
+          </div>
+          <div class="stat-card reveal">
+            <i data-lucide="trophy" aria-hidden="true"></i>
+            <strong>League Standings</strong>
+            <span>Fair formats built for fun, growth, and momentum.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container split-layout">
+          <div class="section-copy reveal">
+            <span class="eyebrow">About the league</span>
+            <h2 id="about-title">A local league built for speed, strategy, and community.</h2>
+            <p>
+              Cypress Capture League brings organized Capture the Flag to Cypress, Texas with a professional
+              structure families can trust. Players learn teamwork, communication, leadership, athleticism,
+              and strategy while competing in a safe, well-run environment.
+            </p>
+            <p>
+              The experience is designed to be exciting for teens and young adults, approachable for new
+              players, and dependable for parents who want clear expectations and strong supervision.
+            </p>
+          </div>
+          <div class="feature-stack reveal">
+            <article class="feature-card">
+              <i data-lucide="route" aria-hidden="true"></i>
+              <h3>Strategy in motion</h3>
+              <p>Players read the field, coordinate routes, defend zones, and make split-second decisions.</p>
+            </article>
+            <article class="feature-card">
+              <i data-lucide="heart-handshake" aria-hidden="true"></i>
+              <h3>Community-minded</h3>
+              <p>Families, teammates, volunteers, and referees help create a positive league culture.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="works" aria-labelledby="works-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">How it works</span>
+            <h2 id="works-title">Clear format. Fair competition. Serious fun.</h2>
+            <p>
+              Edit these details as the season is finalized. The structure below is ready for weekly league
+              play, standings, and parent communication.
+            </p>
+          </div>
+          <div class="process-grid reveal-group">
+            <article class="process-card reveal">
+              <span>01</span>
+              <h3>Register</h3>
+              <p>Players or full teams sign up through the embedded Google Form and purchase options.</p>
+            </article>
+            <article class="process-card reveal">
+              <span>02</span>
+              <h3>Teams form</h3>
+              <p>Players are placed by age group, roster size, experience, and competitive balance.</p>
+            </article>
+            <article class="process-card reveal">
+              <span>03</span>
+              <h3>Weekly matches</h3>
+              <p>Refereed games follow published schedules, field boundaries, and safety expectations.</p>
+            </article>
+            <article class="process-card reveal">
+              <span>04</span>
+              <h3>Standings update</h3>
+              <p>Results, records, sportsmanship, and playoff details can be shared throughout the season.</p>
+            </article>
+          </div>
+          <div class="placeholder-panel reveal">
+            <h3>Editable season placeholders</h3>
+            <div class="placeholder-grid">
+              <span><strong>Age groups:</strong> <em data-config="ageGroups">Ages 10-13, 14-17, 18+</em></span>
+              <span><strong>Dates:</strong> <em data-config="seasonDates">Spring 2027</em></span>
+              <span><strong>Locations:</strong> <em data-config="gameLocations">Cypress area parks</em></span>
+              <span><strong>Schedule:</strong> <em data-config="matchSchedule">Saturdays, time TBD</em></span>
+              <span><strong>Teams:</strong> <em data-config="teamStructure">6-8 players per roster</em></span>
+              <span><strong>Officials:</strong> Referees and field leads on site</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="info" aria-labelledby="info-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">League information</span>
+            <h2 id="info-title">Everything families need before game day.</h2>
+          </div>
+          <div class="info-grid reveal-group">
+            <article class="info-card reveal"><i data-lucide="users" aria-hidden="true"></i><h3>Age Groups</h3><p data-config="ageGroups">Ages 10-13, 14-17, 18+</p></article>
+            <article class="info-card reveal"><i data-lucide="calendar-days" aria-hidden="true"></i><h3>Season Dates</h3><p data-config="seasonDates">Spring 2027</p></article>
+            <article class="info-card reveal"><i data-lucide="map-pin" aria-hidden="true"></i><h3>Game Locations</h3><p data-config="gameLocations">Cypress area parks</p></article>
+            <article class="info-card reveal"><i data-lucide="alarm-clock" aria-hidden="true"></i><h3>Registration Deadline</h3><p data-config="registrationDeadline">TBD</p></article>
+            <article class="info-card reveal"><i data-lucide="user-plus" aria-hidden="true"></i><h3>Team Sizes</h3><p data-config="teamStructure">6-8 players per roster</p></article>
+            <article class="info-card reveal"><i data-lucide="shirt" aria-hidden="true"></i><h3>Equipment Needed</h3><p>Athletic shoes, water bottle, weather-ready clothing, and optional gloves.</p></article>
+            <article class="info-card reveal"><i data-lucide="shield" aria-hidden="true"></i><h3>Safety Information</h3><p>Referees, clear boundaries, hydration breaks, and no dangerous contact.</p></article>
+            <article class="info-card reveal"><i data-lucide="clipboard-list" aria-hidden="true"></i><h3>Parent Information</h3><p>Parent/guardian consent, emergency contacts, and waiver details are collected at registration.</p></article>
+            <article class="info-card reveal"><i data-lucide="book-open-check" aria-hidden="true"></i><h3>League Rules</h3><p>Rules are published before kickoff and reinforced by referees at each match.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band section-dark" aria-labelledby="cta-title">
+        <div class="container cta-grid reveal">
+          <div>
+            <span class="eyebrow">Ready to play?</span>
+            <h2 id="cta-title">Secure your spot before rosters lock.</h2>
+          </div>
+          <a href="#registration" class="btn btn-primary" data-scroll-target="registration">
+            Register Now
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="pricing" aria-labelledby="pricing-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Pricing</span>
+            <h2 id="pricing-title">Simple options for players, teams, and gear.</h2>
+            <p>Pricing is placeholder content and can be updated in the JavaScript configuration section.</p>
+          </div>
+          <div class="pricing-grid reveal-group" data-pricing></div>
+        </div>
+      </section>
+
+      <section class="section" id="registration" aria-labelledby="registration-title">
+        <div class="container registration-grid">
+          <div class="section-copy reveal">
+            <span class="eyebrow">Registration & purchases</span>
+            <h2 id="registration-title">One form for registration, waivers, fees, and merchandise.</h2>
+            <p>
+              This section is prepared for your Google Form. The form can collect player details,
+              parent/guardian information, emergency contacts, waiver acknowledgements, registration fees,
+              and merchandise purchases.
+            </p>
+            <div class="registration-actions">
+              <!-- PASTE DIRECT REGISTRATION FORM LINK BELOW WHEN AVAILABLE -->
+              <a class="btn btn-primary" href="#" data-registration-link>
+                Open Registration Form
+                <i data-lucide="external-link" aria-hidden="true"></i>
+              </a>
+              <!-- PASTE DIRECT PURCHASE FORM LINK BELOW WHEN AVAILABLE -->
+              <a class="btn btn-outline" href="#" data-purchase-link>
+                Purchase Options
+                <i data-lucide="shopping-bag" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="form-shell reveal">
+            <div class="form-header">
+              <div>
+                <span class="eyebrow">Google Form embed</span>
+                <h3>League Registration</h3>
+              </div>
+              <span class="secure-note"><i data-lucide="lock-keyhole" aria-hidden="true"></i> Secure form placeholder</span>
+            </div>
+            <div class="google-form-embed">
+              <!--
+                GOOGLE FORM IFRAME GOES HERE.
+
+                1. In Google Forms, click Send > Embed HTML.
+                2. Copy the iframe code.
+                3. Replace the placeholder div below with the iframe.
+                4. Keep width="100%" and set a generous height, for example:
+
+                <iframe
+                  src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+                  width="100%"
+                  height="900"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                >
+                  Loading...
+                </iframe>
+              -->
+              <div class="form-placeholder">
+                <i data-lucide="clipboard-pen-line" aria-hidden="true"></i>
+                <h4>Paste Google Form iframe here</h4>
+                <p>Responsive container is ready for player registration, waivers, fees, and merchandise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark safety-section" id="safety" aria-labelledby="safety-title">
+        <div class="container split-layout">
+          <div class="section-copy reveal">
+            <span class="eyebrow">Rules & safety</span>
+            <h2 id="safety-title">Competitive energy, clear expectations.</h2>
+            <p>
+              Capture the Flag is fast and strategic. Cypress Capture League keeps the game organized with
+              rules, referees, field boundaries, and sportsmanship standards.
+            </p>
+          </div>
+          <ul class="rule-list reveal" aria-label="League rules and safety expectations">
+            <li><i data-lucide="check" aria-hidden="true"></i> Respect all players and teams</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Respect referees and field staff</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Stay within field boundaries</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> No dangerous contact</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Proper athletic attire required</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Hydration encouraged</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Parent permission required for minors</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Good sportsmanship expected</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Testimonials</span>
+            <h2 id="testimonials-title">Built for families, players, and teams.</h2>
+          </div>
+          <div class="testimonial-grid reveal-group" data-testimonials></div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="faq" aria-labelledby="faq-title">
+        <div class="container narrow">
+          <div class="section-heading reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2 id="faq-title">Common questions before you register.</h2>
+          </div>
+          <div class="faq-list reveal" data-faq></div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-grid">
+          <div class="section-copy reveal">
+            <span class="eyebrow">Contact</span>
+            <h2 id="contact-title">Questions, sponsors, volunteers, and team captains welcome.</h2>
+            <p>
+              Replace the contact placeholders below with official league information before launch.
+            </p>
+          </div>
+          <div class="contact-card reveal">
+            <a href="mailto:info@example.com" data-contact-email><i data-lucide="mail" aria-hidden="true"></i><span data-config="email">info@example.com</span></a>
+            <a href="tel:+10000000000" data-contact-phone><i data-lucide="phone" aria-hidden="true"></i><span data-config="phone">(000) 000-0000</span></a>
+            <a href="#" data-social-instagram><i data-lucide="instagram" aria-hidden="true"></i><span data-config="instagramLabel">@cypresscaptureleague</span></a>
+            <a href="#" data-social-facebook><i data-lucide="facebook" aria-hidden="true"></i><span data-config="facebookLabel">Cypress Capture League</span></a>
+            <span><i data-lucide="map" aria-hidden="true"></i><span data-config="leagueAddress">Cypress, TX 77433</span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#home">
+            <span class="brand-mark">CCL</span>
+            <span class="brand-copy">
+              <span data-config="leagueName">Cypress Capture League</span>
+              <small>Capture the Flag in Cypress, Texas</small>
+            </span>
+          </a>
+          <p data-config="footerNote">Organized competition, teamwork, and community for local players.</p>
+        </div>
+        <div>
+          <h2>Quick links</h2>
+          <a href="#about">About</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#registration">Registration</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <a href="mailto:info@example.com" data-contact-email-footer>info@example.com</a>
+          <a href="#" data-social-instagram-footer>Instagram</a>
+          <a href="#" data-social-facebook-footer>Facebook</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>Copyright <span data-year></span> <span data-config="leagueName">Cypress Capture League</span>. All rights reserved.</span>
+        <span>Website ready for GitHub Pages, Netlify, and Vercel.</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
