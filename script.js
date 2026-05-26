@@ -197,8 +197,8 @@ function renderRegistrationPurchases() {
     .map(
       (option) => `
         <article class="purchase-mini-card">
+          <span class="pricing-tag">${option.tag}</span>
           <div>
-            <span class="pricing-tag">${option.tag}</span>
             <h3>${option.name}</h3>
             <p>${option.description}</p>
           </div>

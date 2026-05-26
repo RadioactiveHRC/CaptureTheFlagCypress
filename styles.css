@@ -741,11 +741,23 @@ select {
   color: var(--color-gray-600);
 }
 
-.registration-grid {
+.registration-grid,
+.registration-flow {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
   gap: var(--space-6);
+}
+
+.registration-grid {
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
   align-items: start;
+}
+
+.registration-flow {
+  grid-template-columns: 1fr;
+}
+
+.registration-flow > .section-copy {
+  max-width: none;
 }
 
 .registration-actions {
@@ -758,8 +770,12 @@ select {
 .registration-steps,
 .registration-purchases {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
   margin-top: var(--space-5);
+}
+
+.registration-steps {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .registration-steps article,
@@ -791,7 +807,7 @@ select {
 .registration-steps h3,
 .purchase-mini-card h3 {
   margin: 0;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   line-height: 1.15;
 }
 
@@ -804,7 +820,15 @@ select {
 
 .purchase-header {
   display: grid;
-  gap: 0.45rem;
+  max-width: 760px;
+  gap: 0.5rem;
+}
+
+.purchase-header h3 {
+  margin: 0;
+  color: var(--color-gray-900);
+  font-size: var(--font-size-2xl);
+  line-height: 1;
 }
 
 .purchase-header code {
@@ -816,22 +840,43 @@ select {
 
 .purchase-mini-grid {
   display: grid;
-  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
 }
 
 .purchase-mini-card {
+  position: relative;
   display: grid;
-  gap: var(--space-3);
-  padding: var(--space-4);
+  align-content: start;
+  gap: var(--space-4);
+  min-height: 100%;
+  padding: var(--space-5);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.purchase-mini-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--color-blue-500);
+}
+
+.purchase-mini-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(182, 255, 79, 0.55);
+  box-shadow: 0 22px 62px rgba(182, 255, 79, 0.18);
 }
 
 .purchase-mini-card strong {
   color: var(--color-gray-900);
-  font-size: 2rem;
+  font-size: 2.55rem;
   line-height: 1;
 }
 
 .purchase-mini-actions {
+  align-self: end;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-2);
@@ -1302,6 +1347,7 @@ body {
 .pricing-card h3,
 .testimonial-card h3,
 .placeholder-panel h3,
+.purchase-header h3,
 .form-placeholder h4,
 .faq-question,
 .price,
@@ -1419,6 +1465,8 @@ body {
   .hero-grid,
   .split-layout,
   .registration-grid,
+  .registration-steps,
+  .purchase-mini-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
