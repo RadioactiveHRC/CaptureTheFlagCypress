@@ -3,8 +3,8 @@
    After running google-form-generator.gs, paste your live Google Form URL below.
    ========================================================================== */
 const SIGNUP_CONFIG = {
-  googleFormUrl: "", // Example: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
-  embedGoogleFormAutomatically: false,
+  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfJmfrwOfRX7a3qI_omJHd99ULkXa_pTh6xaFNEtZSmJgp3Gg/viewform",
+  embedGoogleFormAutomatically: true,
 };
 
 document.addEventListener("DOMContentLoaded", () => {
