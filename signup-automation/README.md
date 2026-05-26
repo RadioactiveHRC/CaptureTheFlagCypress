@@ -7,7 +7,8 @@ It includes:
 - A Google Apps Script file that generates a Google Form
 - Automatic response sheet creation
 - Logged Form edit URL, live Form URL, and Sheet URL
-- A clean website signup section with a signup button and Google Form embed placeholder
+- A clean website signup section with a signup button and embedded Google Form
+- Purchase cards ready for Stripe Payment Links or PayPal Payment Links
 
 ## Files
 
@@ -147,6 +148,47 @@ const SIGNUP_CONFIG = {
 ```
 
 Now the signup buttons will open the Google Form.
+
+## Add Stripe or PayPal Purchase Links
+
+Because this site is hosted on GitHub Pages, do not put Stripe secret keys, PayPal API secrets, or server-side payment code in the website.
+
+Use hosted payment links instead:
+
+- Stripe: create a **Payment Link** in your Stripe dashboard.
+- PayPal: create a **Payment Link** or **Buy Button** in PayPal.
+
+Then open:
+
+```text
+website/script.js
+```
+
+Find:
+
+```js
+purchaseOptions: [
+  {
+    name: "Individual Registration",
+    stripeUrl: "",
+    paypalUrl: "",
+  },
+]
+```
+
+Paste your links:
+
+```js
+purchaseOptions: [
+  {
+    name: "Individual Registration",
+    stripeUrl: "https://buy.stripe.com/YOUR_PAYMENT_LINK",
+    paypalUrl: "https://www.paypal.com/ncp/payment/YOUR_PAYMENT_LINK",
+  },
+]
+```
+
+Leave either field blank if you only want to use one provider.
 
 ## Embed the Form on the Website
 

@@ -50,6 +50,7 @@ a {
 
 .hero-section,
 .content-section,
+.purchase-section,
 .form-section {
   padding-block: clamp(4rem, 9vw, 7rem);
 }
@@ -122,7 +123,8 @@ p {
 }
 
 .hero-actions,
-.form-actions {
+.form-actions,
+.purchase-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -159,6 +161,7 @@ p {
 
 .info-card,
 .feature-list article,
+.purchase-card,
 .embed-shell {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -212,6 +215,65 @@ dd {
 
 .feature-list p {
   margin-bottom: 0;
+}
+
+.purchase-section {
+  background:
+    radial-gradient(circle at 78% 22%, rgba(182, 255, 79, 0.09), transparent 25rem),
+    rgba(255, 255, 255, 0.018);
+}
+
+.purchase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.purchase-card {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+  padding: 1.25rem;
+}
+
+.purchase-tag {
+  width: fit-content;
+  border-radius: 999px;
+  color: var(--color-black);
+  background: var(--color-neon);
+  padding: 0.3rem 0.62rem;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.purchase-card h3 {
+  margin-bottom: 0;
+}
+
+.purchase-card strong {
+  display: block;
+  color: var(--color-white);
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+.purchase-card p {
+  margin-bottom: 0;
+}
+
+.purchase-actions {
+  margin-top: 0.35rem;
+}
+
+.purchase-actions .button {
+  flex: 1 1 160px;
+}
+
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.72;
 }
 
 .form-section {
@@ -268,6 +330,10 @@ code {
     grid-template-columns: 1fr;
   }
 
+  .purchase-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-section {
     min-height: auto;
   }
@@ -275,7 +341,8 @@ code {
 
 @media (max-width: 560px) {
   .hero-actions,
-  .form-actions {
+  .form-actions,
+  .purchase-actions {
     flex-direction: column;
   }
 
