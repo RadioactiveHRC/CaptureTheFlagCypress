@@ -28,8 +28,8 @@ const SITE_CONFIG = {
     leagueAddress: "Cypress, TX 77433",
   },
   links: {
-    registrationForm: "#registration",
-    purchaseForm: "#registration",
+    registrationForm: "https://radioactivehrc.github.io/CaptureTheFlagCypress/signup-automation/website/",
+    purchaseForm: "https://radioactivehrc.github.io/CaptureTheFlagCypress/signup-automation/website/",
   },
   pricing: [
     {
