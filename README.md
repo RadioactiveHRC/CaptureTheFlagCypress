@@ -1,6 +1,6 @@
-# Cypress Capture League Website
+# Ultimate Capture the Flag Website
 
-A complete, professional static website for **Cypress Capture League**, a placeholder Capture the Flag league based in Cypress, Texas.
+A complete, professional static website for **Ultimate Capture the Flag**, a Capture the Flag league based in Cypress, Texas.
 
 The site is designed for player and parent registration, league information, pricing, rules, testimonials, FAQ, contact details, and a responsive Google Form registration area.
 
@@ -8,7 +8,8 @@ The site is designed for player and parent registration, league information, pri
 
 - Mobile-first responsive layout
 - Sticky navigation with mobile menu
-- Modern hero section with countdown timer
+- Black and neon-green hero section inspired by the supplied league logo
+- Countdown timer
 - Smooth scrolling and active navigation states
 - Scroll reveal animations
 - League information cards
@@ -32,7 +33,8 @@ The site is designed for player and parent registration, league information, pri
 ├── .gitignore
 ├── assets/
 │   ├── images/
-│   │   └── hero-capture-league.png
+│   │   ├── hero-capture-league.png
+│   │   └── ultimate-capture-logo.png
 │   ├── icons/
 │   └── logos/
 └── docs/
@@ -130,7 +132,7 @@ Initialize and commit:
 ```bash
 git init
 git add .
-git commit -m "Initial Cypress Capture League website"
+git commit -m "Initial Ultimate Capture the Flag website"
 ```
 
 Connect to GitHub:

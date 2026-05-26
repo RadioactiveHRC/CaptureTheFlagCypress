@@ -3,10 +3,10 @@
    Edit values here to update the website without touching the HTML.
    ========================================================================== */
 const SITE_CONFIG = {
-  leagueName: "Cypress Capture League",
+  leagueName: "Ultimate Capture the Flag",
   leagueDescription:
-    "A polished, organized Capture the Flag league for Cypress families, athletes, and teams.",
-  slogan: "Run with purpose. Win with teamwork.",
+    "A bold, organized Capture the Flag league for Cypress families, athletes, and teams.",
+  slogan: "Move fast. Play smart. Capture everything.",
   seasonBanner: "Season Coming Soon",
   seasonStart: "2027-03-20T09:00:00-05:00",
   ageGroups: "Ages 10-13, 14-17, 18+",
@@ -22,9 +22,9 @@ const SITE_CONFIG = {
     phone: "(000) 000-0000",
     phoneHref: "+10000000000",
     instagram: "https://instagram.com/",
-    instagramLabel: "@cypresscaptureleague",
+    instagramLabel: "@ultimatecapturetheflag",
     facebook: "https://facebook.com/",
-    facebookLabel: "Cypress Capture League",
+    facebookLabel: "Ultimate Capture the Flag",
     leagueAddress: "Cypress, TX 77433",
   },
   links: {
@@ -60,7 +60,7 @@ const SITE_CONFIG = {
   testimonials: [
     {
       quote:
-        "The league concept is exactly what Cypress families need: structured, active, and competitive without losing the community feel.",
+        "The league concept is exactly what Cypress families need: active, structured, and competitive with a look players actually get excited about.",
       name: "Jordan M.",
       role: "Parent placeholder",
       initials: "JM",
