@@ -264,16 +264,39 @@
               and merchandise purchases.
             </p>
             <div class="registration-actions">
-              <!-- PASTE DIRECT REGISTRATION FORM LINK BELOW WHEN AVAILABLE -->
               <a class="btn btn-primary" href="#" data-registration-link>
-                Open Registration Form
+                Open Form
                 <i data-lucide="external-link" aria-hidden="true"></i>
               </a>
-              <!-- PASTE DIRECT PURCHASE FORM LINK BELOW WHEN AVAILABLE -->
               <a class="btn btn-outline" href="#" data-purchase-link>
-                Purchase Options
+                View Purchase Options
                 <i data-lucide="shopping-bag" aria-hidden="true"></i>
               </a>
+            </div>
+
+            <div class="registration-steps" aria-label="Registration steps">
+              <article>
+                <span>1</span>
+                <div>
+                  <h3>Complete the signup form</h3>
+                  <p>Submit player, parent, emergency contact, waiver, and team preference details.</p>
+                </div>
+              </article>
+              <article>
+                <span>2</span>
+                <div>
+                  <h3>Choose a purchase option</h3>
+                  <p>Use Stripe or PayPal checkout links when payment collection is ready.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="registration-purchases" id="registration-purchases">
+              <div class="purchase-header">
+                <span class="eyebrow">Purchase options</span>
+                <p>Add Stripe or PayPal hosted payment links in <code>script.js</code>.</p>
+              </div>
+              <div class="purchase-mini-grid" data-registration-purchases></div>
             </div>
           </div>
 

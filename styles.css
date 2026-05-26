@@ -586,7 +586,9 @@ select {
 .testimonial-card,
 .placeholder-panel,
 .form-shell,
-.contact-card {
+.contact-card,
+.registration-steps article,
+.purchase-mini-card {
   border: 1px solid var(--color-gray-100);
   border-radius: var(--radius-lg);
   background: var(--color-white);
@@ -751,6 +753,97 @@ select {
   flex-wrap: wrap;
   gap: var(--space-3);
   margin-top: var(--space-5);
+}
+
+.registration-steps,
+.registration-purchases {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.registration-steps article,
+.purchase-mini-card {
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.registration-steps article {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.registration-steps span {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  color: var(--color-navy-900);
+  background: var(--color-blue-500);
+  font-weight: 950;
+}
+
+.registration-steps h3,
+.purchase-mini-card h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.15;
+}
+
+.registration-steps p,
+.purchase-header p,
+.purchase-mini-card p {
+  margin: 0.45rem 0 0;
+  color: var(--color-gray-600);
+}
+
+.purchase-header {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.purchase-header code {
+  border-radius: 8px;
+  color: var(--color-blue-400);
+  background: rgba(182, 255, 79, 0.08);
+  padding: 0.1rem 0.28rem;
+}
+
+.purchase-mini-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.purchase-mini-card {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.purchase-mini-card strong {
+  color: var(--color-gray-900);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.purchase-mini-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.purchase-mini-actions .btn {
+  min-height: 42px;
+}
+
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.74;
 }
 
 .form-shell {
@@ -1164,7 +1257,9 @@ body {
 .form-shell,
 .contact-card,
 .faq-item,
-.stat-card {
+.stat-card,
+.registration-steps article,
+.purchase-mini-card {
   border-color: rgba(182, 255, 79, 0.2);
   background:
     linear-gradient(180deg, rgba(182, 255, 79, 0.07), rgba(182, 255, 79, 0.015)),
@@ -1210,6 +1305,9 @@ body {
 .form-placeholder h4,
 .faq-question,
 .price,
+.registration-steps h3,
+.purchase-mini-card h3,
+.purchase-mini-card strong,
 .contact-card a,
 .contact-card span {
   color: #f7ffe9;
@@ -1225,12 +1323,16 @@ body {
 .section-copy p,
 .faq-answer p,
 .form-placeholder,
-.pricing-card li {
+.pricing-card li,
+.registration-steps p,
+.purchase-header p,
+.purchase-mini-card p {
   color: #b7c0ad;
 }
 
 .process-card span,
-.pricing-tag {
+.pricing-tag,
+.registration-steps span {
   color: #050505;
   background: #b6ff4f;
 }
@@ -1366,6 +1468,7 @@ body {
 
   .hero-actions,
   .registration-actions,
+  .purchase-mini-actions,
   .cta-grid {
     align-items: stretch;
     flex-direction: column;
@@ -1385,6 +1488,7 @@ body {
   .process-grid,
   .info-grid,
   .pricing-grid,
+  .purchase-mini-actions,
   .testimonial-grid,
   .rule-list,
   .footer-grid {

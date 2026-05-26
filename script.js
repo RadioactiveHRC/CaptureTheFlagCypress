@@ -29,8 +29,34 @@ const SITE_CONFIG = {
   },
   links: {
     registrationForm: "https://docs.google.com/forms/d/e/1FAIpQLSfJmfrwOfRX7a3qI_omJHd99ULkXa_pTh6xaFNEtZSmJgp3Gg/viewform",
-    purchaseForm: "https://docs.google.com/forms/d/e/1FAIpQLSfJmfrwOfRX7a3qI_omJHd99ULkXa_pTh6xaFNEtZSmJgp3Gg/viewform",
+    purchaseForm: "#registration-purchases",
   },
+  purchaseOptions: [
+    {
+      name: "Individual Registration",
+      price: "$99",
+      tag: "Player pass",
+      description: "Secure one player spot for the upcoming season.",
+      stripeUrl: "",
+      paypalUrl: "",
+    },
+    {
+      name: "Team Registration",
+      price: "$599",
+      tag: "Team bundle",
+      description: "Reserve a full team roster for captains and groups.",
+      stripeUrl: "",
+      paypalUrl: "",
+    },
+    {
+      name: "Merchandise Package",
+      price: "$45",
+      tag: "Optional gear",
+      description: "Add league apparel and player gear to your signup.",
+      stripeUrl: "",
+      paypalUrl: "",
+    },
+  ],
   pricing: [
     {
       name: "Individual Registration",
@@ -131,6 +157,7 @@ const SELECTORS = {
 document.addEventListener("DOMContentLoaded", () => {
   hydrateConfig();
   renderPricing();
+  renderRegistrationPurchases();
   renderTestimonials();
   renderFaq();
   initIcons();
@@ -160,6 +187,45 @@ function hydrateConfig() {
   setLink("[data-social-instagram-footer]", SITE_CONFIG.contact.instagram);
   setLink("[data-social-facebook]", SITE_CONFIG.contact.facebook);
   setLink("[data-social-facebook-footer]", SITE_CONFIG.contact.facebook);
+}
+
+function renderRegistrationPurchases() {
+  const target = document.querySelector("[data-registration-purchases]");
+  if (!target) return;
+
+  target.innerHTML = SITE_CONFIG.purchaseOptions
+    .map(
+      (option) => `
+        <article class="purchase-mini-card">
+          <div>
+            <span class="pricing-tag">${option.tag}</span>
+            <h3>${option.name}</h3>
+            <p>${option.description}</p>
+          </div>
+          <strong>${option.price}</strong>
+          <div class="purchase-mini-actions">
+            ${buildPurchaseButton(option.stripeUrl, "Stripe")}
+            ${buildPurchaseButton(option.paypalUrl, "PayPal", "btn-outline")}
+          </div>
+        </article>
+      `
+    )
+    .join("");
+
+  target.querySelectorAll("[data-payment-missing]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      alert("Payment link coming soon. Add a Stripe or PayPal payment URL in script.js.");
+    });
+  });
+}
+
+function buildPurchaseButton(url, label, styleClass = "btn-primary") {
+  if (!url) {
+    return `<a class="btn btn-small ${styleClass}" href="#" data-payment-missing aria-disabled="true">${label}</a>`;
+  }
+
+  return `<a class="btn btn-small ${styleClass}" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 }
 
 function getConfigValue(key) {
