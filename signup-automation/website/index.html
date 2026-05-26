@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ultimate Capture the Flag Signup</title>
+    <meta
+      name="description"
+      content="Signup section for Ultimate Capture the Flag league registration."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="signup-page">
+      <section class="hero-section" aria-labelledby="signup-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Cypress, Texas</span>
+            <h1 id="signup-title">Ultimate Capture the Flag Signup</h1>
+            <p>
+              Register players, collect parent details, manage emergency contacts, confirm waivers,
+              and organize league preferences through one Google Form.
+            </p>
+            <div class="hero-actions">
+              <!--
+                OPTION 1:
+                Paste your live Google Form URL into website/script.js:
+
+                const SIGNUP_CONFIG = {
+                  googleFormUrl: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+                };
+              -->
+              <a class="button primary" href="#form" data-form-link>Sign Up Now</a>
+              <a class="button secondary" href="#league-info">League Info</a>
+            </div>
+          </div>
+
+          <aside class="info-card" aria-label="League quick facts">
+            <h2>League Info</h2>
+            <dl>
+              <div>
+                <dt>League</dt>
+                <dd>Ultimate Capture the Flag</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Cypress, Texas</dd>
+              </div>
+              <div>
+                <dt>Divisions</dt>
+                <dd>Elementary, Middle School, High School, Open</dd>
+              </div>
+              <div>
+                <dt>Registration</dt>
+                <dd>Generated with Google Apps Script</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section" id="league-info" aria-labelledby="league-info-title">
+        <div class="container section-grid">
+          <div>
+            <span class="eyebrow">How signup works</span>
+            <h2 id="league-info-title">One form for every important registration detail.</h2>
+            <p>
+              The Google Form created by the Apps Script collects player information, parent/guardian
+              details, emergency contacts, medical notes, league preferences, payment status, and
+              required agreements.
+            </p>
+          </div>
+          <div class="feature-list">
+            <article>
+              <h3>Player Details</h3>
+              <p>Name, age, grade, school, experience level, division preference, and jersey size.</p>
+            </article>
+            <article>
+              <h3>Parent & Emergency Info</h3>
+              <p>Guardian contact information plus emergency contact and medical/allergy notes.</p>
+            </article>
+            <article>
+              <h3>Waivers & Agreements</h3>
+              <p>Required checkboxes for waiver, photo/video release, rules, and sportsmanship.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section" id="form" aria-labelledby="form-title">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Registration form</span>
+            <h2 id="form-title">Paste your generated Google Form here.</h2>
+            <p>
+              After running the Apps Script, copy the live form URL from the logs and paste it into
+              <code>website/script.js</code>. You can also replace the placeholder below with the
+              Google Form iframe embed code.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <a class="button primary" href="#" data-form-link>Open Google Form</a>
+          </div>
+
+          <div class="embed-shell" data-embed-shell>
+            <!--
+              OPTION 2: EMBED THE GOOGLE FORM DIRECTLY
+
+              1. Open your generated Google Form.
+              2. Click Send.
+              3. Click the embed icon: <>
+              4. Copy the iframe code.
+              5. Replace the placeholder div below with your iframe.
+
+              Example:
+
+              <iframe
+                src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+                width="100%"
+                height="900"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+              >
+                Loading...
+              </iframe>
+            -->
+            <div class="embed-placeholder">
+              <strong>Google Form embed placeholder</strong>
+              <span>Paste your Google Form iframe here, or set the form URL in script.js.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
